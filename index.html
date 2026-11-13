@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Establo El Castillo · Mijas</title>
+<style>
+:root{--bg:#f4ebde;--surface:#fffaf2;--text:#2a1b10;--muted:#6e5a47;--green:#4a2c18;--green2:#6a4126;--accent:#a9621f;--accent-text:#fff;--line:#e4d9c6;--on-green:#f7f2e9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17100a;--surface:#221810;--text:#f1e6d6;--muted:#b9a58d;--green:#2b1a0e;--green2:#47291a;--accent:#e0a468;--accent-text:#15110d;--line:#352c22;--on-green:#f1e9dc}}
+:root[data-theme="dark"]{--bg:#17100a;--surface:#221810;--text:#f1e6d6;--muted:#b9a58d;--green:#2b1a0e;--green2:#47291a;--accent:#e0a468;--accent-text:#15110d;--line:#352c22;--on-green:#f1e9dc}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--green);z-index:11}
+h1,h2,h3,.brand{font-family:Georgia,"Times New Roman",serif;font-weight:700;line-height:1.15}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--green);color:var(--on-green);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 24px}
+.brand{font-size:1.2rem;text-decoration:none;letter-spacing:.03em}
+.brand small{display:block;font:600 .62rem system-ui,sans-serif;letter-spacing:.22em;opacity:.7}
+.links{display:flex;gap:22px;align-items:center}
+.links a{text-decoration:none;font-size:.92rem;opacity:.9}
+.lang{background:none;border:1px solid rgba(247,242,233,.45);color:var(--on-green);border-radius:20px;padding:4px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-text);padding:13px 28px;border-radius:999px;text-decoration:none;font-weight:700;border:0;cursor:pointer;font:inherit;font-weight:700}
+.btn.ghost{background:transparent;color:var(--on-green);border:1.5px solid rgba(247,242,233,.6)}
+.hero{background:linear-gradient(180deg,var(--green) 0%,var(--green2) 70%,#8a5a35 100%);color:var(--on-green);padding:88px 24px 0;text-align:center;position:relative;overflow:hidden}
+.hero .in{max-width:780px;margin:auto;position:relative;z-index:1;padding-bottom:150px}
+.eyebrow{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;opacity:.75;margin:0 0 18px}
+.hero h1{font-size:clamp(2.3rem,6.5vw,4rem);margin:0 0 20px}
+.hero p.sub{font-size:1.15rem;opacity:.88;margin:0 0 32px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hills{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:130px;display:block}
+.hills path{fill:var(--bg)}
+.trust{max-width:960px;margin:-8px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;color:var(--muted);font-size:.92rem}
+.trust span::before{content:"✦ ";color:var(--accent)}
+section{max-width:1040px;margin:auto;padding:72px 24px}
+.head{text-align:center;max-width:620px;margin:0 auto 44px}
+.head .eyebrow{color:var(--accent);opacity:1}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 12px}
+.head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 24px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(35,28,20,.12)}
+.ico{width:48px;height:48px;border-radius:14px;background:var(--green);color:var(--on-green);display:grid;place-items:center;font-size:1.4rem;margin-bottom:16px}
+.card h3{font-size:1.25rem;margin:0 0 8px}
+.card p{color:var(--muted);margin:0 0 18px;flex:1;font-size:.96rem}
+.card a{color:var(--accent);font-weight:700;text-decoration:none;font-size:.95rem}
+.band{background:var(--green);color:var(--on-green)}
+.band section{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:center}
+.band h2{margin-bottom:16px}
+.band p{opacity:.88}
+.band ul{list-style:none;padding:0;margin:20px 0 28px}
+.band li{padding:8px 0 8px 30px;position:relative;opacity:.92}
+.band li::before{content:"✓";position:absolute;left:0;color:var(--accent)}
+.panel{background:var(--green2);border:1px solid rgba(247,242,233,.15);border-radius:22px;padding:36px 30px;text-align:center}
+.panel .big{font-size:3.4rem}
+.panel p{margin:8px 0 0}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.step{counter-increment:s;text-align:center;padding:0 10px}
+.step::before{content:counter(s);display:grid;place-items:center;width:46px;height:46px;margin:0 auto 14px;border-radius:50%;background:var(--accent);color:var(--accent-text);font:700 1.2rem Georgia,serif}
+.step h3{font-size:1.1rem;margin:0 0 6px}
+.step p{color:var(--muted);margin:0;font-size:.95rem}
+.rest{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rest section{text-align:center;max-width:760px}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.contact .card{text-align:center;align-items:center}
+.contact .card p{flex:0;margin:0 0 6px}
+footer{background:var(--green);color:var(--on-green);text-align:center;padding:36px 24px;font-size:.9rem}
+footer p{margin:4px 0;opacity:.8}
+@media (max-width:720px){.links a{display:none}nav{padding:12px 16px}.hero{padding-top:64px}section{padding:56px 20px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="#top">EL CASTILLO<small>ESTABLO · MIJAS</small></a>
+  <div class="links">
+    <a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
+    <a href="#ninos" data-es="Niños" data-en="Kids">Niños</a>
+    <a href="#restaurante" data-es="Restaurante" data-en="Restaurant">Restaurante</a>
+    <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+    <button class="lang" id="lang" type="button">EN</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="in">
+    <p class="eyebrow" data-es="Mijas · Málaga" data-en="Mijas · Málaga">Mijas · Málaga</p>
+    <h1 data-es="Caballos, ponis y buena mesa en plena naturaleza" data-en="Horses, ponies and great food in the heart of nature">Caballos, ponis y buena mesa en plena naturaleza</h1>
+    <p class="sub" data-es="Excursiones a caballo, actividades con ponis para niños y un restaurante para disfrutar en familia o con amigos." data-en="Horse excursions, pony activities for children and a restaurant to enjoy with family or friends.">Excursiones a caballo, actividades con ponis para niños y un restaurante para disfrutar en familia o con amigos.</p>
+    <div class="cta">
+      <a class="btn wa" data-svc="general" href="#" data-es="Reservar por WhatsApp" data-en="Book on WhatsApp">Reservar por WhatsApp</a>
+      <a class="btn ghost" href="#servicios" data-es="Ver servicios" data-en="See services">Ver servicios</a>
+    </div>
+  </div>
+  <svg class="hills" viewBox="0 0 1200 130" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 C200 20 380 120 600 70 C820 20 1000 110 1200 50 L1200 130 L0 130 Z"/></svg>
+</header>
+
+<div class="trust">
+  <span data-es="Todos los niveles" data-en="All levels">Todos los niveles</span>
+  <span data-es="Monitores con los niños" data-en="Instructors with children">Monitores con los niños</span>
+  <span data-es="Grupos y familias" data-en="Groups and families">Grupos y familias</span>
+  <span data-es="Reserva por WhatsApp" data-en="Book via WhatsApp">Reserva por WhatsApp</span>
+</div>
+
+<section id="servicios">
+  <div class="head">
+    <p class="eyebrow" data-es="Lo que ofrecemos" data-en="What we offer">Lo que ofrecemos</p>
+    <h2 data-es="Nuestros servicios" data-en="Our services">Nuestros servicios</h2>
+    <p data-es="Cuatro formas de disfrutar del Establo El Castillo." data-en="Four ways to enjoy Establo El Castillo.">Cuatro formas de disfrutar del Establo El Castillo.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><div class="ico">🐎</div><h3 data-es="Excursiones a caballo" data-en="Horse excursions">Excursiones a caballo</h3><p data-es="Rutas guiadas por los senderos de la sierra, adaptadas a tu nivel, tanto si montas por primera vez como si ya tienes experiencia." data-en="Guided rides along the mountain trails, adapted to your level, whether it is your first time or you are an experienced rider.">Rutas guiadas por los senderos de la sierra, adaptadas a tu nivel, tanto si montas por primera vez como si ya tienes experiencia.</p><a class="wa" data-svc="caballo" href="#" data-es="Reservar →" data-en="Book →">Reservar →</a></article>
+    <article class="card"><div class="ico">🧒</div><h3 data-es="Excursiones con ponis para niños" data-en="Pony excursions for kids">Excursiones con ponis para niños</h3><p data-es="Paseos pensados para los más pequeños, con ponis tranquilos y un monitor acompañándolos en todo momento." data-en="Rides designed for little ones, with calm ponies and an instructor with them at all times.">Paseos pensados para los más pequeños, con ponis tranquilos y un monitor acompañándolos en todo momento.</p><a class="wa" data-svc="excursion-poni" href="#" data-es="Reservar →" data-en="Book →">Reservar →</a></article>
+    <article class="card"><div class="ico">🎓</div><h3 data-es="Clases de poni para niños" data-en="Pony lessons for kids">Clases de poni para niños</h3><p data-es="Aprenden a montar y a cuidar del poni de forma progresiva, divertida y segura, a su ritmo." data-en="They learn to ride and care for the pony step by step, in a fun and safe way, at their own pace.">Aprenden a montar y a cuidar del poni de forma progresiva, divertida y segura, a su ritmo.</p><a class="wa" data-svc="clases" href="#" data-es="Más información →" data-en="More info →">Más información →</a></article>
+    <article class="card"><div class="ico">🍽️</div><h3 data-es="Restaurante" data-en="Restaurant">Restaurante</h3><p data-es="Cocina de la tierra en un entorno tranquilo rodeado de caballos. Ideal para después de la ruta, comidas de grupo y celebraciones." data-en="Home-style cooking in a peaceful setting surrounded by horses. Perfect after your ride, for group meals and celebrations.">Cocina de la tierra en un entorno tranquilo rodeado de caballos. Ideal para después de la ruta, comidas de grupo y celebraciones.</p><a class="wa" data-svc="restaurante" href="#" data-es="Reservar mesa →" data-en="Book a table →">Reservar mesa →</a></article>
+  </div>
+</section>
+
+<div class="band" id="ninos">
+  <section>
+    <div>
+      <p class="eyebrow" data-es="Para los más pequeños" data-en="For the little ones">Para los más pequeños</p>
+      <h2 data-es="Su primer contacto con los caballos" data-en="Their first contact with horses">Su primer contacto con los caballos</h2>
+      <p data-es="Ya sea un paseo o una clase, los niños viven una experiencia cercana, segura y divertida junto a nuestros ponis." data-en="Whether it is a ride or a lesson, children enjoy a close, safe and fun experience with our ponies.">Ya sea un paseo o una clase, los niños viven una experiencia cercana, segura y divertida junto a nuestros ponis.</p>
+      <ul>
+        <li data-es="Ponis tranquilos y acostumbrados a los niños" data-en="Calm ponies used to children">Ponis tranquilos y acostumbrados a los niños</li>
+        <li data-es="Monitor acompañando en todo momento" data-en="Instructor present at all times">Monitor acompañando en todo momento</li>
+        <li data-es="Paseos puntuales o clases con continuidad" data-en="One-off rides or ongoing lessons">Paseos puntuales o clases con continuidad</li>
+        <li data-es="Una actividad al aire libre para toda la familia" data-en="An outdoor activity for the whole family">Una actividad al aire libre para toda la familia</li>
+      </ul>
+      <a class="btn wa" data-svc="clases" href="#" data-es="Consultar clases y paseos" data-en="Ask about lessons and rides">Consultar clases y paseos</a>
+    </div>
+    <div class="panel"><div class="big">🐴</div><h3 data-es="Aprender jugando" data-en="Learning through play">Aprender jugando</h3><p data-es="Montar, cuidar y conocer al poni: una actividad que los niños recuerdan." data-en="Riding, caring for and getting to know the pony: an activity children remember.">Montar, cuidar y conocer al poni: una actividad que los niños recuerdan.</p></div>
+  </section>
+</div>
+
+<section>
+  <div class="head">
+    <p class="eyebrow" data-es="Reservar es fácil" data-en="Booking is easy">Reservar es fácil</p>
+    <h2 data-es="Cómo funciona" data-en="How it works">Cómo funciona</h2>
+  </div>
+  <div class="steps">
+    <div class="step"><h3 data-es="Elige tu actividad" data-en="Choose your activity">Elige tu actividad</h3><p data-es="Excursión, clase de poni o mesa en el restaurante." data-en="Excursion, pony lesson or a table at the restaurant.">Excursión, clase de poni o mesa en el restaurante.</p></div>
+    <div class="step"><h3 data-es="Escríbenos por WhatsApp" data-en="Message us on WhatsApp">Escríbenos por WhatsApp</h3><p data-es="Te confirmamos disponibilidad, horarios y precios." data-en="We confirm availability, times and prices.">Te confirmamos disponibilidad, horarios y precios.</p></div>
+    <div class="step"><h3 data-es="Disfruta en El Castillo" data-en="Enjoy El Castillo">Disfruta en El Castillo</h3><p data-es="Ven y vive la experiencia con nosotros." data-en="Come and enjoy the experience with us.">Ven y vive la experiencia con nosotros.</p></div>
+  </div>
+</section>
+
+<div class="rest" id="restaurante">
+  <section>
+    <p class="eyebrow" style="color:var(--accent);opacity:1" data-es="Después de la ruta" data-en="After your ride">Después de la ruta</p>
+    <h2 data-es="Siéntate a la mesa" data-en="Take a seat at the table">Siéntate a la mesa</h2>
+    <p style="color:var(--muted)" data-es="Nuestro restaurante te espera con cocina casera y producto local, en un ambiente relajado. Perfecto para completar la excursión o para celebrar con los tuyos." data-en="Our restaurant awaits with home cooking and local produce in a relaxed atmosphere. Perfect to complete your excursion or to celebrate with your loved ones.">Nuestro restaurante te espera con cocina casera y producto local, en un ambiente relajado. Perfecto para completar la excursión o para celebrar con los tuyos.</p>
+    <p><a class="btn wa" data-svc="restaurante" href="#" data-es="Reservar mesa" data-en="Book a table">Reservar mesa</a></p>
+  </section>
+</div>
+
+<section id="contacto">
+  <div class="head">
+    <p class="eyebrow" data-es="Hablemos" data-en="Get in touch">Hablemos</p>
+    <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
+  </div>
+  <div class="contact">
+    <div class="card"><div class="ico">💬</div><h3>WhatsApp</h3><p data-es="La forma más rápida de reservar." data-en="The fastest way to book.">La forma más rápida de reservar.</p><a class="wa" data-svc="general" href="#" data-es="Escribir ahora →" data-en="Message now →">Escribir ahora →</a></div>
+    <div class="card"><div class="ico">📍</div><h3 data-es="Ubicación" data-en="Location">Ubicación</h3><p>Establo El Castillo<br>Mijas, Málaga</p></div>
+    <div class="card"><div class="ico">🕒</div><h3 data-es="Horarios" data-en="Opening hours">Horarios</h3><p data-es="Consúltanos disponibilidad y horarios por WhatsApp." data-en="Ask us about availability and times on WhatsApp.">Consúltanos disponibilidad y horarios por WhatsApp.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">EL CASTILLO</div>
+  <p data-es="Excursiones a caballo · Ponis para niños · Restaurante" data-en="Horse excursions · Ponies for kids · Restaurant">Excursiones a caballo · Ponis para niños · Restaurante</p>
+  <p>Mijas, Málaga</p>
+</footer>
+
+<script>
+(function(){
+  var NUM="34000000000"; // sustituir por el WhatsApp real
+  var lang="es";
+  var M={
+    general:{es:"Hola, quiero información sobre el Establo El Castillo.",en:"Hello, I would like information about Establo El Castillo."},
+    caballo:{es:"Hola, quiero reservar una excursión a caballo.",en:"Hello, I would like to book a horse excursion."},
+    "excursion-poni":{es:"Hola, quiero reservar una excursión con ponis para niños.",en:"Hello, I would like to book a pony excursion for children."},
+    clases:{es:"Hola, quiero información sobre las clases de poni para niños.",en:"Hello, I would like information about pony lessons for children."},
+    restaurante:{es:"Hola, quiero reservar mesa en el restaurante.",en:"Hello, I would like to book a table at the restaurant."}
+  };
+  function apply(){
+    document.documentElement.lang=lang;
+    document.querySelectorAll("[data-es]").forEach(function(el){el.textContent=el.getAttribute("data-"+lang);});
+    document.querySelectorAll(".wa").forEach(function(a){
+      var m=M[a.getAttribute("data-svc")]||M.general;
+      a.href="https://wa.me/"+NUM+"?text="+encodeURIComponent(m[lang]);
+      a.target="_blank";a.rel="noopener";
+    });
+    document.getElementById("lang").textContent=lang==="es"?"EN":"ES";
+  }
+  document.getElementById("lang").addEventListener("click",function(){lang=lang==="es"?"en":"es";apply();});
+  apply();
+})();
+</script>
+</body>
+</html>
